@@ -14,7 +14,7 @@ let randomGame = Math.floor(Math.random() * 3) + 1;
 
 rockBtn.addEventListener("click", rockBtnFun);
 paperBtn.addEventListener("click", paperBtnFun);
-// scissorsBtn.addEventListener("click", scissorsBtnFun);
+scissorsBtn.addEventListener("click", scissorsBtnFun);
 
 function rockBtnFun() {
   randomGame = Math.floor(Math.random() * 3) + 1;
@@ -42,6 +42,21 @@ function paperBtnFun() {
     message.textContent = "It's a tie!";
   } else {
     message.textContent = "You win! paper beats rock";
+    myTotalScore++;
+    myScore.textContent = myTotalScore;
+  }
+}
+function scissorsBtnFun() {
+  randomGame = Math.floor(Math.random() * 3) + 1;
+  console.log(randomGame);
+  if (randomGame === 1) {
+    message.textContent = "You lose! rock beats scissors";
+    comTotalScore++;
+    computerScore.textContent = comTotalScore;
+  } else if (randomGame === 3) {
+    message.textContent = "It's a tie!";
+  } else {
+    message.textContent = "You win! scissors beats paper";
     myTotalScore++;
     myScore.textContent = myTotalScore;
   }
