@@ -20,8 +20,9 @@ function rockBtnFun() {
   let randomGame = Math.floor(Math.random() * 3) + 1;
   console.log(randomGame);
   countRound++;
-  count.textContent = countRound;
-
+  countHistory = document.createElement("span");
+  count.appendChild(countHistory);
+  countHistory.textContent = countRound;
   let rockHistory = document.createElement("i");
   rockHistory.className = "fa-solid fa-hand-back-fist";
   yourChoice.appendChild(rockHistory);
@@ -50,7 +51,9 @@ function paperBtnFun() {
   let randomGame = Math.floor(Math.random() * 3) + 1;
   console.log(randomGame);
   countRound++;
-  count.textContent = countRound;
+  countHistory = document.createElement("span");
+  count.appendChild(countHistory);
+  countHistory.textContent = countRound;
   let paperHistory = document.createElement("i");
   paperHistory.className = "fa-solid fa-hand";
   yourChoice.appendChild(paperHistory);
