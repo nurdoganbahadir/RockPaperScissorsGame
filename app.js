@@ -10,11 +10,6 @@ const computerChoice = document.querySelector(".computerChoice");
 let myTotalScore = 0;
 let comTotalScore = 0;
 
-let paperHistory = document.createElement("i");
-paperHistory.className = "fa-solid fa-hand";
-let scissorsHistory = document.createElement("i");
-scissorsHistory.className = "fa-solid fa-hand-scissors";
-
 rockBtn.addEventListener("click", rockBtnFun);
 paperBtn.addEventListener("click", paperBtnFun);
 scissorsBtn.addEventListener("click", scissorsBtnFun);
@@ -77,15 +72,27 @@ function paperBtnFun() {
 function scissorsBtnFun() {
   let randomGame = Math.floor(Math.random() * 3) + 1;
   console.log(randomGame);
+  let scissorsHistory = document.createElement("i");
+  scissorsHistory.className = "fa-solid fa-hand-scissors";
+  yourChoice.appendChild(scissorsHistory);
   if (randomGame === 1) {
     message.textContent = "You lose! rock beats scissors";
     comTotalScore++;
     computerScore.textContent = comTotalScore;
+    rockHistory = document.createElement("i");
+    rockHistory.className = "fa-solid fa-hand-back-fist";
+    computerChoice.appendChild(rockHistory);
   } else if (randomGame === 3) {
     message.textContent = "It's a tie!";
+    scissorsHistory = document.createElement("i");
+    scissorsHistory.className = "fa-solid fa-hand-scissors";
+    computerChoice.appendChild(scissorsHistory);
   } else {
     message.textContent = "You win! scissors beats paper";
     myTotalScore++;
     myScore.textContent = myTotalScore;
+    paperHistory = document.createElement("i");
+    paperHistory.className = "fa-solid fa-hand";
+    computerChoice.appendChild(paperHistory);
   }
 }
