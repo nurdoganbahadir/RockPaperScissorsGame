@@ -1,0 +1,51 @@
+.container {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 5rem;
+}
+p {
+  font-weight: bolder;
+}
+.icons {
+  border: 2px solid red;
+  border-radius: 10px;
+  width: 60%;
+  margin: auto;
+  background-color: rgb(226, 225, 225);
+}
+i{
+    font-size: 3rem;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s;
+}
+i:hover{
+    transform: scale(110%);
+}
+i:active{
+    transform: scale(90%);
+}
+.fa-hand-back-fist{
+    background-color: rgb(3, 153, 253);
+}
+.fa-hand{
+    background-color: red;
+}
+.fa-hand-scissors{
+    background-color: rgb(3, 207, 3);
+}
+.scores {
+  width: 60%;
+  margin: auto;
+  border: 2px solid red;
+  background-color: rgb(226, 225, 225);
+  border-radius: 10px;
+}
+.myScore {
+  color: rgb(0, 140, 255);
+}
+.ComputerScore {
+  color: red;
+}
