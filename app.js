@@ -18,6 +18,8 @@ rockBtn.addEventListener("click", rockBtnFun);
 // scissorsBtn.addEventListener("click", scissorsBtnFun);
 
 function rockBtnFun() {
+  randomGame = Math.floor(Math.random() * 3) + 1;
+  console.log(randomGame);
   if (randomGame === 1) {
     message.textContent = "It's a tie!";
   } else if (randomGame === 2) {
