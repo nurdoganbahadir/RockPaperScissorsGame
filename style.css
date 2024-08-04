@@ -79,3 +79,21 @@ button {
   flex-direction: column;
   gap: 1rem;
 }
+.fa-hand-back-fist {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(3, 153, 253);
+  width: 50px;
+}
+.fa-hand {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: red;
+  width: 50px;
+}
+.fa-hand-scissors {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(3, 207, 3);
+  width: 50px;
+}
