@@ -11,10 +11,9 @@ let comTotalScore = 0;
 //bilgisayar 3 sayıdan birini rastgele alsın 1. taş 2. kağıt 3. makas
 
 let randomGame = Math.floor(Math.random() * 3) + 1;
-console.log(randomGame);
 
 rockBtn.addEventListener("click", rockBtnFun);
-// paperBtn.addEventListener("click", paperBtnFun);
+paperBtn.addEventListener("click", paperBtnFun);
 // scissorsBtn.addEventListener("click", scissorsBtnFun);
 
 function rockBtnFun() {
@@ -28,6 +27,21 @@ function rockBtnFun() {
     computerScore.textContent = comTotalScore;
   } else {
     message.textContent = "You win! rock beats scissors";
+    myTotalScore++;
+    myScore.textContent = myTotalScore;
+  }
+}
+function paperBtnFun() {
+  randomGame = Math.floor(Math.random() * 3) + 1;
+  console.log(randomGame);
+  if (randomGame === 3) {
+    message.textContent = "You lose! scissors beats paper";
+    comTotalScore++;
+    computerScore.textContent = comTotalScore;
+  } else if (randomGame === 2) {
+    message.textContent = "It's a tie!";
+  } else {
+    message.textContent = "You win! paper beats rock";
     myTotalScore++;
     myScore.textContent = myTotalScore;
   }
