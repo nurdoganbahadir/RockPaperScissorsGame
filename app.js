@@ -6,9 +6,11 @@ const myScore = document.querySelector(".myScore");
 const computerScore = document.querySelector(".ComputerScore");
 const yourChoice = document.querySelector(".yourChoice");
 const computerChoice = document.querySelector(".computerChoice");
+const count = document.querySelector(".count");
 
 let myTotalScore = 0;
 let comTotalScore = 0;
+let countRound = 0;
 
 rockBtn.addEventListener("click", rockBtnFun);
 paperBtn.addEventListener("click", paperBtnFun);
@@ -17,6 +19,8 @@ scissorsBtn.addEventListener("click", scissorsBtnFun);
 function rockBtnFun() {
   let randomGame = Math.floor(Math.random() * 3) + 1;
   console.log(randomGame);
+  countRound++;
+  count.textContent = countRound;
 
   let rockHistory = document.createElement("i");
   rockHistory.className = "fa-solid fa-hand-back-fist";
@@ -45,6 +49,8 @@ function rockBtnFun() {
 function paperBtnFun() {
   let randomGame = Math.floor(Math.random() * 3) + 1;
   console.log(randomGame);
+  countRound++;
+  count.textContent = countRound;
   let paperHistory = document.createElement("i");
   paperHistory.className = "fa-solid fa-hand";
   yourChoice.appendChild(paperHistory);
@@ -72,6 +78,10 @@ function paperBtnFun() {
 function scissorsBtnFun() {
   let randomGame = Math.floor(Math.random() * 3) + 1;
   console.log(randomGame);
+  countRound++;
+  countHistory = document.createElement("span");
+  count.appendChild(countHistory);
+  countHistory.textContent = countRound;
   let scissorsHistory = document.createElement("i");
   scissorsHistory.className = "fa-solid fa-hand-scissors";
   yourChoice.appendChild(scissorsHistory);
