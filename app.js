@@ -4,7 +4,8 @@ const scissorsBtn = document.querySelector(".scissorsBtn");
 const message = document.querySelector(".message");
 const myScore = document.querySelector(".myScore");
 const computerScore = document.querySelector(".ComputerScore");
-const history = document.querySelector(".history");
+const yourChoice = document.querySelector(".yourChoice");
+const computerChoice = document.querySelector(".computerChoice");
 
 let myTotalScore = 0;
 let comTotalScore = 0;
