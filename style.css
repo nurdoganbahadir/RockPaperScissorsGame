@@ -52,3 +52,10 @@ button {
 .ComputerScore {
   color: red;
 }
+.history {
+  width: 60%;
+  margin: auto;
+  margin-top: 2rem;
+  border: 2px solid red;
+  border-radius: 10px;
+}
